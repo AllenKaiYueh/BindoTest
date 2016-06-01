@@ -17,11 +17,13 @@
     <style>
       .menu {
         float: left;
+        padding: 10px;
       }
       .menu p {
-        cusor: pointer;
+        cursor: pointer;
         width: 100px;
         height: 50px;
+        padding: 10px;
         border: 1px solid #A4A4A4;
       }
       .menu p:hover {
@@ -30,6 +32,11 @@
       .menu .select {
         background-color: #848484;
         border: 1px solid #000;
+        color: #000;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -42,10 +49,31 @@
     </div>
     <div id="content">
       <div class="top">
-        
+        <p class="title">
+          Inventory
+        <p>
       </div>
       <div class="data">
-        
+        <table>
+          <thead>
+            <tr>
+              <td>barcode</td>
+              <td>name</td>
+              <td>qty</td>
+              <td>cost</td>
+              <td>category</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>123193</td>
+              <td>Nice dress</td>
+              <td>98</td>
+              <td>$45</td>
+              <td>woman</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>

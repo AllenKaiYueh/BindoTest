@@ -30,14 +30,14 @@
         
         for (var i=0; i<=dataListNum; i++) {
           if (i+1 < JSONdata.Inventory.length) {
-            for(var j=0; j<JSONdata.Inventory.length; j++) {
+            for(var j=i; j<JSONdata.Inventory.length; j++) {
               var obj = JSONdata.Inventory[j];
               
               content += "<tr><td>"+obj.barcode+"</td><td>"+obj.name+"</td><td>"+obj.qty+"</td>" + 
                          "<td>"+obj.cost+"</td><td>"+obj.category+"</td></tr>";
             }
           } else {
-            content += "<tr><td></td><td></td><td></td><td></td><td></td></tr>";
+            content += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
           }
         }
         
@@ -73,6 +73,9 @@
         font-size: 24px;
         font-weight: bold;
       }
+      .tada-table {
+        
+      }
       .tada-table thead tr td{
         width: 100px;
         height: 50px;
@@ -94,7 +97,7 @@
         <p>
       </div>
       <div class="data">
-        <table class="tada-table" id="dataTable">
+        <table class="tada-table" id="dataTable" cellpadding="1" cellspacing="1">
           <thead>
             <tr>
               <td>barcode</td>

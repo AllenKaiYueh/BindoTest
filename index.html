@@ -8,9 +8,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
     <script type="text/javascript">
-      $(function(){
+      //$(function(){
         alert("123");
         
         var data = '{"Inventory":[' +
@@ -19,9 +19,14 @@
             '{"barcode":"123193","name":"Nice dress","qty":"98","cost":"$45","category":"woman" }]}';
         
 
-        var obj = JSON.parse(data);
-        console.log(obj);
-      });
+        var JSONdata = JSON.parse(data);
+        console.log(JSONdata);
+        
+        JSONdata.forEach(function(obj) { 
+          console.log(obj); 
+        });
+        
+      //});
     </script>
     <style>
       .menu {

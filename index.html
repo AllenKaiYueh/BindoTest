@@ -22,9 +22,11 @@
         var JSONdata = JSON.parse(data);
         console.log(JSONdata);
         
-        JSONdata.forEach(function(obj) { 
-          console.log(obj); 
-        });
+        for(var i = 0; i < JSONdata.length; i++) {
+          var obj = JSONdata[i];
+      
+          console.log(obj);
+        }
         
       //});
     </script>

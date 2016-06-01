@@ -30,14 +30,14 @@
         
         for (var i=0; i<=dataListNum; i++) {
           if (i+1 < JSONdata.Inventory.length) {
-            for(var j=i; j<JSONdata.Inventory.length; j++) {
+            //for(var j=i; j<JSONdata.Inventory.length; j++) {
               var obj = JSONdata.Inventory[j];
               
               content += "<tr><td>"+obj.barcode+"</td><td>"+obj.name+"</td><td>"+obj.qty+"</td>" + 
                          "<td>"+obj.cost+"</td><td>"+obj.category+"</td></tr>";
-            }
+            //}
           } else {
-            content += "<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>";
+            content += "<tr><td>&nbsp;</td><td>- -</td><td>- -</td><td>- -</td><td>- -</td></tr>";
           }
         }
         

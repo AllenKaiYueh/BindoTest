@@ -8,9 +8,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript">
-      //$(function(){
+      $(function(){
         alert("123");
         
         var data = '{"Inventory":[' +
@@ -22,13 +22,27 @@
         var JSONdata = JSON.parse(data);
         console.log(JSONdata);
         
-        for(var i = 0; i < JSONdata.Inventory.length; i++) {
-          var obj = JSONdata.Inventory[i];
-      
-          console.log(obj);
+        
+        
+        //var dataTable = $("#dataTable tbody");
+        
+        var dataListNum = 10, content = "";
+        
+        for (var i=0; i<=dataListNum; i++) {
+          if (i+1 < JSONdata.Inventory.length) {
+            for(var j=0; j<JSONdata.Inventory.length; j++) {
+              var obj = JSONdata.Inventory[j];
+              
+              content += "<tr><td>"+obj.barcode+"</td><td>"+obj.name+"</td><td>"+obj.qty+"</td>" + 
+                         "<td>"+obj.cost+"</td><td>"+obj.category+"</td></tr>";
+            }
+          } else {
+            content += "<tr><td></td><td></td><td></td><td></td><td></td></tr>";
+          }
         }
         
-      //});
+        $("#dataTable tbody").html(conent);
+      });
     </script>
     <style>
       .menu {
@@ -80,7 +94,7 @@
         <p>
       </div>
       <div class="data">
-        <table class="tada-table">
+        <table class="tada-table" id="dataTable">
           <thead>
             <tr>
               <td>barcode</td>

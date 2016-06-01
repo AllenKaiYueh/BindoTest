@@ -12,6 +12,15 @@
     <script type="text/javascript">
       $(function(){
         alert("123");
+        
+        var data = '{"Inventory":[' +
+            '{"barcode":"123193","name":"Nice dress","qty":"98","cost":"$45","category":"woman" },' +
+            '{"barcode":"123193","name":"Nice dress","qty":"98","cost":"$45","category":"woman" },' +
+            '{"barcode":"123193","name":"Nice dress","qty":"98","cost":"$45","category":"woman" }]}';
+        
+
+        var obj = JSON.parse(data);
+        console.log(obj);
       });
     </script>
     <style>

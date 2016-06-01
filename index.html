@@ -18,6 +18,7 @@
       .menu {
         float: left;
         padding: 10px;
+        border-right: 1px solid #000;
       }
       .menu p {
         cursor: pointer;
@@ -34,9 +35,17 @@
         border: 1px solid #000;
         color: #000;
       }
+      .content {
+        float: left;
+        padding: 20px;
+      }
       .title {
         font-size: 24px;
         font-weight: bold;
+      }
+      .tada-table thead tr td{
+        width: 100px;
+        height: 50px;
       }
     </style>
   </head>
@@ -47,14 +56,14 @@
       <p>Suppliers</p>
       <p>Customers</p>
     </div>
-    <div id="content">
+    <div id="content" class="content">
       <div class="top">
         <p class="title">
           Inventory
         <p>
       </div>
       <div class="data">
-        <table>
+        <table class="tada-table">
           <thead>
             <tr>
               <td>barcode</td>

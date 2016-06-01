@@ -21,12 +21,9 @@
 
         var JSONdata = JSON.parse(data);
         console.log(JSONdata);
-        console.log(JSONdata.length);
-        console.log(JSONdata.Inventory);
-        console.log(JSONdata["Inventor"]);
         
         for(var i = 0; i < JSONdata.Inventory.length; i++) {
-          var obj = JSONdata[i];
+          var obj = JSONdata.Inventory[i];
       
           console.log(obj);
         }
